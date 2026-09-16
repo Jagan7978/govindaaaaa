@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Govinda bhai (game changer)</title>
+    <title>Govinda Bhai - Game Changer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <!-- Meta Pixel Code -->
     <script>
@@ -28,184 +29,213 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Roboto, sans-serif;
         }
 
         body {
-            background-color: #0b111e;
-            background-image: radial-gradient(circle at center, #152238 0%, #0b111e 70%);
+            background-color: #0b0f19;
             color: #ffffff;
-            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            min-height: 100vh;
+            padding: 20px 10px;
         }
 
-        .card {
-            background: rgba(18, 25, 38, 0.85);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 24px;
-            padding: 35px 25px;
-            max-width: 440px;
+        .container {
             width: 100%;
+            max-width: 480px;
+            background: linear-gradient(180deg, #151c2c 0%, #0d121d 100%);
+            border-radius: 20px;
+            padding: 25px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 136, 204, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(10px);
         }
 
-        .main-title {
+        .badge {
+            background: linear-gradient(45deg, #ff0055, #ff5050);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(255, 0, 85, 0.3);
+        }
+
+        .title {
             font-size: 26px;
             font-weight: 800;
-            letter-spacing: 0.5px;
-            margin-bottom: 25px;
-            text-transform: uppercase;
+            margin-bottom: 10px;
             color: #ffffff;
+            text-transform: uppercase;
         }
 
-        .yellow-box {
-            background-color: #d1ff00;
-            color: #000000;
-            padding: 16px 20px;
+        .highlight {
+            color: #0088cc;
+            background: -webkit-linear-gradient(45deg, #0088cc, #00d2ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #a0aec0;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            background: rgba(255, 255, 255, 0.03);
             border-radius: 12px;
-            font-weight: 800;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .feature-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-item i {
+            color: #00e676;
+            margin-right: 10px;
             font-size: 16px;
-            line-height: 1.4;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(209, 255, 0, 0.2);
+        }
+
+        .timer-box {
+            background: rgba(0, 136, 204, 0.1);
+            border: 1px solid rgba(0, 136, 204, 0.3);
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
         }
 
         .timer-text {
-            color: #8c9ba5;
-            font-size: 15px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            letter-spacing: 0.5px;
-        }
-
-        .timer-seconds {
-            color: #22c55e;
-            font-weight: 700;
-        }
-
-        .btn-container {
-            margin-bottom: 30px;
-        }
-
-        .join-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: linear-gradient(180deg, #991b1b 0%, #7f1d1d 100%);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 18px 24px;
-            border-radius: 16px;
-            font-weight: 800;
-            font-size: 18px;
-            line-height: 1.2;
-            letter-spacing: 0.5px;
-            border: 2px solid #38bdf8;
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
-            transition: transform 0.2s, box-shadow 0.2s;
-            text-transform: uppercase;
-        }
-
-        .join-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
-        }
-
-        .telegram-icon {
-            background: #ffffff;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .telegram-icon svg {
-            width: 22px;
-            height: 22px;
-            fill: #0088cc;
-            margin-right: 2px;
-        }
-
-        .divider {
-            border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
-            margin-bottom: 25px;
-        }
-
-        .disclaimer {
-            color: #64748b;
             font-size: 12px;
-            line-height: 1.6;
-            margin-bottom: 25px;
-            padding: 0 5px;
+            color: #00d2ff;
+            margin-bottom: 5px;
         }
 
-        .agency-footer {
-            font-size: 15px;
-            font-weight: 700;
-            color: #ffffff;
+        #timer {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ff4757;
         }
 
-        .agency-footer span {
-            color: #3b82f6;
+        .btn-telegram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(45deg, #0088cc, #00a8ff);
+            color: white;
+            text-decoration: none;
+            padding: 16px 20px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 0 20px rgba(0, 136, 204, 0.6);
+            transition: all 0.3s ease;
+            animation: pulse 1.8s infinite;
+        }
+
+        .btn-telegram:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(0, 136, 204, 0.9);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(0, 136, 204, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 136, 204, 0);
+            }
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #718096;
+        }
+
+        .footer span {
+            color: #a0aec0;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1 class="main-title">Govinda bhai (game changer)</h1>
+    <div class="container">
+        <div class="badge">🔥 Official Telegram Channel</div>
+        
+        <h1 class="title">GOVINDA BHAI</h1>
+        <h2 class="subtitle highlight">(GAME CHANGER)</h2>
 
-        <div class="yellow-box">
-            Accurate analysis • Match Update • Right Pred!ction
+        <div class="features">
+            <div class="feature-item">
+                <i class="fas fa-check-circle"></i> 100% Accurate Daily Updates
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-check-circle"></i> India's Most Trusted Game Changer
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-check-circle"></i> Join Free Official Channel
+            </div>
         </div>
 
-        <div class="timer-text">
-            FREE JOINING ENDS IN <span id="timer" class="timer-seconds">15s</span>
+        <div class="timer-box">
+            <div class="timer-text">OFFER EXPIRES IN</div>
+            <div id="timer">02:00</div>
         </div>
 
-        <div class="btn-container">
-            <a href="https://t.me/+jOrXRy9b14M4MGU1" target="_blank" class="join-btn">
-                <span>JOIN TELEGRAM FOR NEW UPDATE</span>
-                <div class="telegram-icon">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
-                    </svg>
-                </div>
-            </a>
-        </div>
+        <!-- Yahan apna Telegram Channel ka Link dalen -->
+        <a href="https://t.me/your_telegram_channel" class="btn-telegram" target="_blank">
+            <i class="fab fa-telegram-plane"></i> JOIN TELEGRAM NOW
+        </a>
 
-        <div class="divider"></div>
-
-        <p class="disclaimer">
-            Disclaimer: This channel shares cricket updates, analysis, and general information for fans. It does not promote betting or gambling. No outcomes are guaranteed. Please verify independently and act responsibly.
-        </p>
-
-        <div class="agency-footer">
-            Ads by <span>Vision Ads Agency</span>
+        <div class="footer">
+            Powered by <span>Vision Ads Agency</span>
         </div>
     </div>
 
     <script>
-        let seconds = 15;
+        // Countdown Timer Script
+        let timeInSeconds = 120; // 2 minutes
         const timerElement = document.getElementById('timer');
 
-        setInterval(() => {
-            seconds--;
-            if (seconds < 2) {
-                seconds = 15;
-            }
-            timerElement.textContent = seconds + 's';
-        }, 1000);
-    </script>
+        function updateTimer() {
+            const minutes = Math.floor(timeInSeconds / 60);
+            const seconds = timeInSeconds % 60;
+            
+            timerElement.textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 
+            if (timeInSeconds > 0) {
+                timeInSeconds--;
+            } else {
+                timeInSeconds = 120; // Reset loop
+            }
+        }
+
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
 </body>
 </html>
